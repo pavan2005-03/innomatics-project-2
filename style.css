@@ -1,0 +1,81 @@
+body {
+    font-family:'Lucida Sans';
+    background-color: #dcddd6;
+    display: flex;
+    justify-content: center;
+    background-image:url("Screenshot 2025-02-22 001350.png") ;
+    align-items: left ;
+    height: 100vh;
+    margin: 0;
+}
+h1 {
+    color: rgb(213, 204, 204);
+    size-adjust: 200px;
+    font-family: bold;
+}
+
+
+    .marquee {
+        white-space: nowrap;
+        overflow: hidden;
+        display: inline-block;
+        width: 100%;
+        box-sizing: border-box;
+        animation: slide 5s linear infinite;
+        will-change: transform; /*This will helps to tell that animation will change so button works properly */
+      }
+
+      @keyframes slide {
+        from {
+          transform: translateX(55%);
+        }
+        to {
+          transform: translateX(-4%);
+        }
+      }
+      
+    
+  
+  
+.container {
+    text-align: center;
+}
+header {
+    margin-bottom: 20px;
+}
+button {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: rgb(126, 176, 216);
+}
+#cards-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin: 20px 0;
+}
+.card {
+    width: 100px;
+    height: 100px;
+    background-color: #8fd0a1;
+    border: 2px solid #151312;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+.card.flipped {
+    background-color: #ede5ec;
+    color: white;
+}
+.hidden {
+    display: none;
+}
+#game-over {
+    margin-top: 20px;
+}
